@@ -22,7 +22,7 @@ protocol DynamicSideBarDelegate {
     func viewWillStart(view: DynamicSideBar, viewType: DynamicSideBarType)
     func viewTapped(view: DynamicSideBar, completion: ((Void)))
 }
-
+@available(iOS 14.0,*)
 open class DynamicSideBar: UIView {
     
     override init(frame: CGRect) {
