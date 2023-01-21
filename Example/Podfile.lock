@@ -1,0 +1,27 @@
+PODS:
+  - DynamicSideBar (0.1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - DynamicSideBar (from `../`)
+  - FBSnapshotTestCase (~> 2.1.4)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  DynamicSideBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DynamicSideBar: 0932b555801bff0b31ce73a58411513aef4cadb5
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: c429a91d5836de44057ad26242a6dd164a0604c7
+
+COCOAPODS: 1.11.3

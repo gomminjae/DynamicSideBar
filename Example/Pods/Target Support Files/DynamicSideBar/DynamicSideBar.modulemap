@@ -1,0 +1,6 @@
+framework module DynamicSideBar {
+  umbrella header "DynamicSideBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
