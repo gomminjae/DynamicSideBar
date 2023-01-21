@@ -46,7 +46,7 @@
 		6DA6444487B4FA13F4F574D7 /* Pods-DynamicSideBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicSideBar_Example.release.xcconfig"; path = "Target Support Files/Pods-DynamicSideBar_Example/Pods-DynamicSideBar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6FF7FBF582E663B304FE1334 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BBEDC7F9F16C380E842D76F8 /* Pods-DynamicSideBar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicSideBar_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DynamicSideBar_Tests/Pods-DynamicSideBar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C1E1A044A81DEFC32533C78D /* DynamicSideBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DynamicSideBar.podspec; path = ../DynamicSideBar.podspec; sourceTree = "<group>"; };
+		C1E1A044A81DEFC32533C78D /* DynamicSideBar.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DynamicSideBar.podspec; path = ../DynamicSideBar.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
