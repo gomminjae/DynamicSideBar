@@ -13,26 +13,38 @@ enum DynamicSideBarType {
     case custom
 }
 
-enum GestureType {
+public enum GestureType {
     case pan
     case longGesture
 }
 
-protocol DynamicSideBarDelegate {
-    func viewWillStart(view: DynamicSideBar, viewType: DynamicSideBarType)
-    func viewTapped(view: DynamicSideBar, completion: ((Void)))
+@objc protocol DynamicSideBarDelegate {
+    @objc optional func viewDidDrag(_ sender: UIView)
+    @objc optional func viewEndDrag(_ sender: UIView)
 }
+
 @available(iOS 14.0,*)
 open class DynamicSideBar: UIView {
+    
+    var viewType: DynamicSideBarType?
+    weak var delegate: DynamicSideBarDelegate?
+    open var duration: TimeInterval = 0.1
+    open var isEnabled: Bool = true {
+        didSet {
+            
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
+        setupGesture()
     }
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: Layout
     private func setupView() {
         //baseView
         addSubview(baseView)
@@ -44,23 +56,53 @@ open class DynamicSideBar: UIView {
         //sideBar
         baseView.addSubview(sideBar)
         sideBar.centerXAnchor.constraint(equalTo: baseView.centerXAnchor).isActive = true
-        sideBar.centerYAnchor.constraint(equalTo: baseView.centerYAnchor).isActive = true
-        sideBar.widthAnchor.constraint(equalTo: baseView.widthAnchor, constant: 20).isActive = true
-        sideBar.heightAnchor.constraint(equalTo: baseView.heightAnchor, constant: 20).isActive = true
-        
-        //deleteButton
+        sideBar.trailingAnchor.constraint(equalTo: baseView.trailingAnchor).isActive = true
     }
     
+    var panGesture: UIPanGestureRecognizer {
+        return UIPanGestureRecognizer(target: self, action: #selector(drag))
+    }
+    
+    var longGesture: UILongPressGestureRecognizer {
+        return UILongPressGestureRecognizer(target: self, action: #selector(longPress))
+    }
+    
+    
+    private func setupGesture() {
+        self.addGestureRecognizer(panGesture)
+        self.addGestureRecognizer(longGesture)
+    }
+    
+    
+    //MARK: Executed Gesture
+    @objc func drag(_ sender: UIPanGestureRecognizer) {
+        sender.translation(in: self)
+        
+        switch sender.state {
+        case .began:
+            print("began")
+        case .ended:
+            print("ended")
+        default:
+            print("ended")
+        }
+    }
+    
+    @objc func longPress(_ sender: UILongPressGestureRecognizer) {
+        print("Long Press")
+    }
     //MARK: UI👽
     lazy var baseView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 20
         view.backgroundColor = .red
         return view
     }()
     
     lazy var sideBar: UIView = {
         let view = UIView()
+        view.backgroundColor = .black
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -71,7 +113,13 @@ open class DynamicSideBar: UIView {
         return button
     }()
     
-    
-    
-    
+}
+extension UIPanGestureRecognizer {
+    func translateView(view: UIView) {
+        let translation = self.translation(in: view)
+        let xAxis = view.center.x + translation.x
+        let yAxis = view.center.y + translation.y
+        view.center = CGPoint(x: xAxis, y: yAxis)
+        setTranslation(.zero, in: view)
+    }
 }
