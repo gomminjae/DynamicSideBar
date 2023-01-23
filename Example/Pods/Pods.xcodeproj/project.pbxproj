@@ -31,6 +31,7 @@
 		A6B9D6B0B97469A54A57827DBD052C99 /* DynamicSideBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2B316953624C76CD108C0224157F15 /* DynamicSideBar-dummy.m */; };
 		B52281F9F4340D4FC8ABB2FEB1FEC08E /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */; };
 		B52E8656297BE13A0072F9E2 /* DynamicSideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E8655297BE13A0072F9E2 /* DynamicSideBar.swift */; };
+		B52E865A297E82E10072F9E2 /* DynamicSideBar+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52E8659297E82E10072F9E2 /* DynamicSideBar+Helper.swift */; };
 		BBC2B4C939236C70F36AB4AF606834A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
 		C390C6005353FB986CB52F474CEF8588 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */; };
 		C65CA79ECC768D9E9D9BBBE375B7000F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57221B54D014471C3D3E1925EFC917C8 /* Foundation.framework */; };
@@ -112,6 +113,7 @@
 		A5532D4C8870654FF8BE90D0F06FEF8B /* DynamicSideBar.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DynamicSideBar.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		B52E8655297BE13A0072F9E2 /* DynamicSideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicSideBar.swift; sourceTree = "<group>"; };
+		B52E8659297E82E10072F9E2 /* DynamicSideBar+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicSideBar+Helper.swift"; sourceTree = "<group>"; };
 		B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
 		B8888CEB436D3A15C57C1BD4B234B26D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BBC61D46B5F42CB901A427CEF353EA50 /* DynamicSideBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DynamicSideBar-Info.plist"; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 		D1CECF9DE36DD9B1438563B893EEFBA1 /* DynamicSideBar */ = {
 			isa = PBXGroup;
 			children = (
+				B52E8659297E82E10072F9E2 /* DynamicSideBar+Helper.swift */,
 				B52E8655297BE13A0072F9E2 /* DynamicSideBar.swift */,
 				F50E4C9DB1EB23FD470495050A6C19E2 /* Pod */,
 				646A0F6937980D060F7EB5A055DAC8AA /* Support Files */,
@@ -545,6 +548,7 @@
 			files = (
 				B52E8656297BE13A0072F9E2 /* DynamicSideBar.swift in Sources */,
 				A6B9D6B0B97469A54A57827DBD052C99 /* DynamicSideBar-dummy.m in Sources */,
+				B52E865A297E82E10072F9E2 /* DynamicSideBar+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,7 +38,7 @@ open class DynamicSideBar: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-        setupGesture()
+        //setupGesture()
     }
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -83,6 +83,7 @@ open class DynamicSideBar: UIView {
             print("began")
         case .ended:
             print("ended")
+            gestureRecognizerShouldBegin(sender)
         default:
             print("ended")
         }
@@ -90,6 +91,12 @@ open class DynamicSideBar: UIView {
     
     @objc func longPress(_ sender: UILongPressGestureRecognizer) {
         print("Long Press")
+        
+    }
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIPanGestureRecognizer) -> Bool {
+        let velocity = gestureRecognizer.velocity(in: baseView)
+        return abs(velocity.y) > abs(velocity.x)
     }
     //MARK: UI👽
     lazy var baseView: UIView = {
