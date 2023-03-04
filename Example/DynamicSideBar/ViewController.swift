@@ -31,7 +31,6 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        print("memory Warning")
         // Dispose of any resources that can be recreated.
     }
 

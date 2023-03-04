@@ -83,7 +83,7 @@ open class DynamicSideBar: UIView {
             print("began")
         case .ended:
             print("ended")
-            gestureRecognizerShouldBegin(sender)
+            //gestureRecognizerShouldBegin(sender)
         default:
             print("ended")
         }
